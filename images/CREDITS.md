@@ -5,3 +5,4 @@
 - quad.webp: supplied by the client (source and licence to be confirmed)
 - welding.jpg: File:Welding Sparks (3843951412).jpg, Steve Jurvetson from Los Altos, USA, CC BY 2.0 (https://commons.wikimedia.org/wiki/File:Welding_Sparks_(3843951412).jpg)
 - motorcycle.jpg: File:Five children on a motorcycle.jpg, Basile Morin, CC BY-SA 4.0 (https://commons.wikimedia.org/wiki/File:Five_children_on_a_motorcycle.jpg)
+- dragon.jpg: Welsh dragon vector preview from Vecteezy (https://www.vecteezy.com), author and licence to be confirmed; free licence needs attribution

@@ -82,19 +82,17 @@ a { color: inherit; text-underline-offset: 0.2em; }
 .nav-list a:hover { text-decoration: underline; text-decoration-color: var(--spark); text-decoration-thickness: 3px; }
 
 /* Hero */
-.hero { background: var(--green); color: #fff; padding-block: var(--section); }
+.hero { background: var(--green); color: #fff; padding-block: clamp(1.5rem, 1rem + 2vw, 3rem) var(--section); }
 .hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: calc(var(--space) * 2); align-items: center; }
 .hero-place { color: var(--spark); font-weight: 700; margin-bottom: 0.75rem; }
 .hero h1 { max-width: 16ch; }
 .lead { font-size: var(--step-1); color: #dfe4e1; }
 .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: var(--space); }
-.hero-figure { margin: 0; position: relative; }
-.dragon { display: block; width: 100%; max-height: 26rem; color: var(--spark); }
-/* Weld-bead accent along the bottom edge of the photo */
-.hero-figure::after {
-  content: ""; position: absolute; inset: auto 0 -0.9rem 0; height: 0.45rem;
-  background: radial-gradient(circle at 0.3rem 50%, var(--spark) 0.28rem, transparent 0.3rem) 0 0 / 0.6rem 0.45rem repeat-x;
+.hero-figure {
+  margin: 0; align-self: start; aspect-ratio: 4 / 3; padding: 6% 8%;
+  background: var(--stone); border: 6px solid var(--spark); border-radius: 50%;
 }
+.dragon { display: block; width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
 
 /* Sections */
 .section { padding-block: var(--section); }
