@@ -17,7 +17,7 @@
   --step-3: clamp(2.2rem, 1.5rem + 3.4vw, 4rem);
 
   --space: clamp(1rem, 0.8rem + 1vw, 1.75rem);
-  --section: clamp(3rem, 2rem + 5vw, 6rem);
+  --section: clamp(2.5rem, 1.5rem + 3.5vw, 4.5rem);
   --radius: 0.5rem;
   --measure: 62ch;
 }
@@ -74,15 +74,19 @@ a { color: inherit; text-underline-offset: 0.2em; }
 }
 .brand { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; font-family: var(--font-head); font-weight: 700; font-size: var(--step-1); }
 .brand-mark {
-  display: grid; place-items: center; width: 2.5rem; height: 2.5rem;
+  display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem;
   background: var(--spark); color: var(--slate); border-radius: 0.35rem; font-size: 1rem;
 }
+.brand-mark span { margin-bottom: -5px; }
+/* Trim the line box to cap height so the letters centre optically */
+.brand { line-height: 1; }
+.brand-name { text-box: trim-both cap alphabetic; }
 .nav-list { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
 .nav-list a { display: inline-block; padding: 0.5rem 0.15rem; text-decoration: none; font-weight: 600; }
 .nav-list a:hover { text-decoration: underline; text-decoration-color: var(--spark); text-decoration-thickness: 3px; }
 
 /* Hero */
-.hero { background: var(--green); color: #fff; padding-block: clamp(1.5rem, 1rem + 2vw, 3rem) var(--section); }
+.hero { background: var(--green); color: #fff; padding-block: clamp(1.5rem, 1rem + 2vw, 3rem) calc(var(--section) * 0.5); }
 .hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: calc(var(--space) * 2); align-items: center; }
 .hero-place { color: var(--spark); font-weight: 700; margin-bottom: 0.75rem; }
 .hero h1 { max-width: 16ch; }
@@ -113,7 +117,7 @@ a { color: inherit; text-underline-offset: 0.2em; }
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: var(--space); }
 .card { background: #fff; border-radius: var(--radius); padding: calc(var(--space) * 1.25); border-top: 4px solid var(--green); }
 .card p { color: var(--muted); }
-.card-feature { background: var(--green); color: #fff; border-top-color: var(--spark); }
+.card-feature { grid-column: 1 / -1; background: var(--green); color: #fff; border-top-color: var(--spark); }
 .card-feature p { color: #e3ebe6; }
 
 .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: calc(var(--space) * 1.5); margin-top: calc(var(--space) * 1.5); }
