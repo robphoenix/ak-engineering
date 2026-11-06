@@ -82,6 +82,11 @@ a { color: inherit; text-underline-offset: 0.2em; }
 .brand { line-height: 1; }
 .brand-name { text-box: trim-both cap alphabetic; }
 .nav-list { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+/* The wrapped header is too tall to keep pinned on small screens */
+@media (max-width: 48rem) {
+  html { scroll-padding-top: 1rem; }
+  .site-header { position: static; }
+}
 .nav-list a { display: inline-block; padding: 0.5rem 0.15rem; text-decoration: none; font-weight: 600; }
 .nav-list a:hover { text-decoration: underline; text-decoration-color: var(--spark); text-decoration-thickness: 3px; }
 
